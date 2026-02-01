@@ -1,0 +1,26 @@
+def lovecalculator(name1,name2):
+    pass1 = ["t", "r", "u", "e"]
+    pass2 = ["l", "o", "v", "e"]
+    true_score = 0
+    love_score = 0
+
+    for letter in name1:
+        if letter in pass1:
+            true_score += 1
+
+    for letter in name1:
+        if letter in pass2:
+            love_score += 1
+
+    for letter in name2:
+        if letter in pass1:
+            true_score += 1
+
+    for letter in name2:
+        if letter in pass2:
+            love_score += 1
+
+    love_score = str(true_score) + str(love_score)
+    print(f"love score for {name1} and {name2 } is {(love_score)}")
+
+lovecalculator("adam","eva")
