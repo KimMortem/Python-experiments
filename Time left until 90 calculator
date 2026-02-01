@@ -1,0 +1,9 @@
+import math
+
+def life_in_weeks(location, age):
+    age_in_weeks = age * 52
+    death = (32850 - age_in_weeks) / 7
+    print(f"you have left {math.ceil(death)} weeks until you die at 90 and you're {location}")
+
+
+life_in_weeks(age=14, location="shit")
