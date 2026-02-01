@@ -1,0 +1,36 @@
+size = input("What size of icecream would you like to have? S, M or XL? ").upper()
+strawberry = input("would you like strawberry on your icecream? Y or N ").upper()
+blueberry = input("would you like blueberry on your icecream? Y or N ").upper()
+mango = input("would you like mango on your icecream? Y or N ").upper()
+apple= input("would you like apple on your icecream? Y or N ").upper()
+
+bill=0
+
+if size == "S":
+    bill += 7
+elif size == "M":
+    bill += 9
+elif size == "XL":
+    bill += 11
+else:
+    print("Invalid input")
+
+if strawberry == "Y":
+    if size == "S":
+        bill += 5
+    else:
+        bill += 6
+
+if blueberry == "Y":
+    if size == "S":
+        bill += 3
+    else:
+        bill += 4
+
+if mango == "Y":
+    bill += 2
+
+if apple == "Y":
+    bill += 1
+
+print(f"Your bill for icecream would be ${bill}. Have a nice day!")
