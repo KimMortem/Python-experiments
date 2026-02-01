@@ -1,0 +1,61 @@
+print(r'''
+⢀⣀⣤⣤⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⠉⠀⠀⣩⡿⠋⠛⢛⣷⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⠀⢀⡾⠋⠀⠀⣠⠎⠁⠁⠰⠋⢙⠷⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢿⡴⠋⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠉⠀⠰⢋⡿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠸⣇⠀⢀⡾⠃⠀⢀⣴⣿⣛⠷⣦⡀⠀⠀⠈⠀⠊⣹⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢿⣴⠋⠀⠀⢀⣿⣽⣿⣿⣷⢻⡇⠀⠀⠀⠀⠀⠰⠋⣻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠸⣷⠀⠀⠀⠈⣷⡸⢿⣿⣿⡾⠃⠀⢀⡀⠀⠀⠀⠘⠁⡼⢿⣟⠛⠛⠛⠛⠛⠷⠶⢦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⢹⣶⢂⠀⠀⠈⠛⠻⠟⠋⠁⣴⣿⣿⣿⣳⣄⠀⠀⠈⣰⠋⣻⣷⠒⠶⠶⠶⠶⠶⠦⠬⢽⣦⠀⠀⠀⠀
+⠀⠀⠀⢻⣏⡀⠀⠀⠀⠀⠀⠀⢰⡯⣿⣿⣿⡏⣿⠀⠀⠀⢀⡼⠋⠹⣧⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀
+⠀⠀⠀⠀⢻⣧⠄⣠⠄⠀⠀⠀⠀⠻⣟⣛⣛⣽⠏⠀⠀⣴⠟⠀⢀⣼⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠹⣯⡥⢂⡀⠀⠀⠀⠀⠈⠉⠉⠀⠀⣠⣾⣁⠀⣠⠞⠉⠐⣿⣄⣀⣀⣀⣀⠀⠀⠀⢸⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⢿⣯⠴⢃⡄⠀⠀⠀⠀⠀⢀⡼⠋⢿⡝⠻⢷⣤⣀⣀⣿⠋⠉⠉⠉⠙⢷⣄⠀⠈⣷⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣯⡴⢃⠀⠀⢀⡴⠋⠀⢀⡼⢻⡄⠀⠈⠙⣿⡁⠀⠀⠀⠀⠀⠀⠙⢷⣄⣿⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡿⢿⣦⣴⠋⠀⢀⡴⠋⠀⠈⢿⣆⠀⠀⠹⣿⠶⣤⡀⠀⠀⠀⠀⠀⠻⣿⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠸⡏⠙⠻⠶⣯⣾⣗⣀⣠⡾⠋⠻⣷⢶⣿⣷⣮⡙⢷⣄⠀⠀⠀⠀⠈⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⣇⠀⠀⠀⠀⠈⠉⢻⡏⠀⠀⠀⢻⣄⠻⣯⡈⠳⣄⠙⢷⣄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⢻⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠹⣦⡈⠛⢦⣘⢧⡀⠹⣧⡀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠘⡇⠀⠀⠀⠀⠀⠈⢷⣄⠀⠀⠀⠀⠈⠻⢶⣄⠉⠛⢷⡄⠘⢷⡄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⣷⡀⠀⠀⠀⠀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠙⠻⢦⣄⡀⠀⠈⢿⡄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠳⠶⢦⣤⣤⣤⣤⣹⣷⣄⠀⠀⠀⠀⠀⠀⠉⠛⠷⣦⣌⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛''')
+#ascii art (r''' for not treating features like ] / \ and """ or ''' allows for multiple lines of strings)
+
+print("Welcome to the Yutani Expedition. \n"
+      "You're one of 1233 humans that are about to leave the earth before the heath death.\n"
+      "Before you enter the spaceship you need to pass our logical exam.\n"
+      "Exam starts now.\n")
+
+#story
+
+life_impact = input("You can either kill cockroach or a ladybug based on their net impact on the earth. \n"
+      "What's your decision? \n").lower()
+if life_impact == "cockroach" or life_impact == "ladybug":
+    print("You dont understand animal life, you arent qualified for the Yutani expedition")
+elif life_impact in ["nothing", "anything", "neither", "either", "both"]:
+    print("you understand life, proceed to next question")
+    kindness = input("You are 20 years old.\n"
+                            "You havent drink water for 4 days. You have 1 more day left until you die of thirst. You need at least one glass of water to survive.\n"
+                            "Your grandfather is 80 years old.\n"
+                            "Your grandfather havent drink water for 4 days as well and have 1 more day left until he die of thirst. He need at least one glass of water to survive.\n"
+                            "12 hours before your death you got handed out one glass of water, but your grandfather does not.\n"
+                            "Are you giving this glass of water to your grandfather? type YES or NO\n").upper()
+    if kindness == "YES":
+        print("You dont understand human life, you arent qualified for the Yutani expedition")
+    elif kindness == "NO":
+        print("You understand life, proceed to next question")
+        importance = input("This is last question.\n"
+                           "Only 1 answer is correct.\n"
+                           "What is the best type of ruling systems for humans?\n"
+                           "hierarchy or equality?\n").lower()
+        if importance == "hierarchy":
+            print("You are right, but you arent qualified for the Yutani expedition.")
+        elif importance == "equality":
+            print("You are right. You are qualified for the Yutani expedition.")
+        else:
+            print("Your answer is not correct.")
+    else:
+        print("Your answer is not correct.")
+else:
+    print("Your answer is not correct.")
