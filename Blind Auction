@@ -1,0 +1,21 @@
+from art import logo
+print(logo)
+
+
+
+bidding_over = True
+bid_list = {}
+
+
+while bidding_over:
+    name = input("what's your name?")
+    bid = int(input("how much you want to bid?"))
+    bid_list[name] = bid
+    end = input("is there anybody else who want to bid? type yes or no")
+
+    if end == "yes":
+        print("\n" * 100)
+        print("your turn")
+    else:
+        print(f"Winner is {max(bid_list)}")
+        bidding_over = False
