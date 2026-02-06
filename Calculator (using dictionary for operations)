@@ -1,3 +1,6 @@
+from art import logo
+print(logo)
+
 def add(n1, n2):
     return n1 + n2
 
@@ -28,10 +31,9 @@ while game_over == False:
                    "/ \n")
     choice2 = int(input("What's the second number?\n"))
     result = (operation[choice](choice1, choice2))
-    print(f"{choice1} + {choice2} = {result}")
+    print(f"{choice1} {choice} {choice2} = {result}")
     decision = input(f"Type 'y' to continue calculating with {result}, type 'n' to start new calculation\n")
     while decision == "y":
-        if decision == "y":
             choice = input("Pick an operation\n"
                            "+ \n"
                            "- \n"
@@ -39,9 +41,6 @@ while game_over == False:
                            "/ \n")
             choice2 = int(input("What's the second number?\n"))
             new_result = (operation[choice](result,choice2))
-            print(f"{result} + {choice2} = {new_result}")
-            result = (operation[choice](result, choice2))
+            print(f"{result} {choice} {choice2} = {new_result}")
+            result = new_result
             decision = input(f"Type 'y' to continue calculating with {result}, type 'n' to start new calculation\n")
-        elif decision == "n":
-            print("byebye")
-            game_over == True
