@@ -1,0 +1,76 @@
+from art import logo
+print(logo)
+
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+ace = 11
+blackjack = ace + 10
+
+Game_Over = False
+
+while Game_Over == False:
+
+    my_score = 0
+    my_cards = []
+    computer_score = 0
+    computer_cards = []
+
+    for _ in range(1):
+        computer_cards.append(random.choice(cards))
+        computer_score = sum(computer_cards)
+
+    while Game_Over == False:
+        decision1 = input("do you want to play a Blackjack game? \n"
+                          "Type 'y' or 'n' ")
+        if decision1 == "y":
+            for _ in range (1):
+                my_cards.append(random.choice(cards))
+                my_score = sum(my_cards)
+            print(f"Your cards are: {my_cards}. Your score: {my_score}.")
+            print(f"Computer cards: {computer_cards}.\n")
+            if my_score >= 21:
+                if my_score == computer_score:
+                    print("It's a draw")
+                elif my_score > 21:
+                    print("You lose")
+                elif my_score > computer_score:
+                    print("You win")
+                elif my_score == blackjack:
+                    print("You got the blackjack, you win!")
+                elif computer_score == blackjack:
+                    print("Computer got the blackjack, you lose!")
+                elif my_score and computer_score == blackjack:
+                    print("Both of you have blackjack, but you lose)")
+                elif computer_score > 21:
+                    print("Computer lose")
+                Game_Over = True
+
+        if decision1 == "n":
+            for _ in range (1):
+                computer_cards.append(random.choice(cards))
+                computer_score = sum(computer_cards)
+                print(f"Your cards are: {my_cards}. Your score: {my_score}.")
+                print(f"Computer cards: {computer_cards}. Score: {computer_score}.\n")
+                if computer_score <= 21 and computer_score > my_score:
+                    print("Computer win")
+                    Game_Over = True
+                if computer_score >= 21 and Game_Over == False:
+                    if my_score == computer_score:
+                        print("It's a draw")
+                    elif computer_score > 21:
+                        print("You win")
+                    elif computer_score > my_score:
+                        print("Computer win")
+                    elif my_score == blackjack:
+                        print("You got the blackjack, you win!")
+                    elif computer_score == blackjack:
+                        print("Computer got the blackjack, you lose!")
+                    elif my_score and computer_score == blackjack:
+                        print("Both of you have blackjack, but you lose)")
+                    elif computer_score > 21:
+                        print("Computer lose")
+                    Game_Over = True
+
+if Game_Over == True:
+    Game_Over == False
