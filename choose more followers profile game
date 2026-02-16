@@ -1,4 +1,5 @@
 game_over = False
+score = 0
 
 print(logo)
 
@@ -19,9 +20,12 @@ while not game_over:
     choice = input("Who has more followers? Type A or B:")
 
     if choice == "A" and followers_A > followers_B:
-        print("You guessed it")
+        score += 1
+        print(f"You guessed it. Your score is {score}")
     elif choice == "B" and followers_A < followers_B:
-        print("You guessed it")
+        score += 1
+        print(f"You guessed it. Your score is {score}")
     else:
         game_over = True
+        score == 0
         print("You have lost")
