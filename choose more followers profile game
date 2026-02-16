@@ -1,0 +1,27 @@
+game_over = False
+
+print(logo)
+
+while not game_over:
+
+    data_A = random.choice(data)
+    data_B = random.choice(data)
+    if data_A == data_B:
+        data_A = random.choice(data)
+
+    followers_A = data_A["follower_count"]
+    followers_B = data_B["follower_count"]
+
+    print(f"Compare A: {data_A["name"]}, a {data_A["description"]} from {data_A["country"]}")
+    print(vs)
+    print(f"Against B: {data_B["name"]}, a {data_B["description"]} from {data_B["country"]}")
+
+    choice = input("Who has more followers? Type A or B:")
+
+    if choice == "A" and followers_A > followers_B:
+        print("You guessed it")
+    elif choice == "B" and followers_A < followers_B:
+        print("You guessed it")
+    else:
+        game_over = True
+        print("You have lost")
