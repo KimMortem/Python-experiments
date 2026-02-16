@@ -1,7 +1,13 @@
+#pulling data from game_data where informations looks like this:
+#        'name': 'Kim Kardashian',
+#        'follower_count': 167,
+#        'description': 'Reality TV personality and businesswoman',
+#        'country': 'United States'
+
+from game_data import data
+
 game_over = False
 score = 0
-
-print(logo)
 
 while not game_over:
 
@@ -14,7 +20,6 @@ while not game_over:
     followers_B = data_B["follower_count"]
 
     print(f"Compare A: {data_A["name"]}, a {data_A["description"]} from {data_A["country"]}")
-    print(vs)
     print(f"Against B: {data_B["name"]}, a {data_B["description"]} from {data_B["country"]}")
 
     choice = input("Who has more followers? Type A or B:")
