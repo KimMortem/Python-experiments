@@ -1,0 +1,100 @@
+BREAD_MENU = {
+    "white_loaf": {
+        "ingredients": {
+            "flour": 500,
+            "water": 300,
+            "yeast": 10,
+            "salt": 5,
+        },
+        "cost": 2.0,
+    },
+    "sourdough": {
+        "ingredients": {
+            "flour": 600,
+            "water": 350,
+            "starter": 200,
+            "salt": 8,
+        },
+        "cost": 3.5,
+    },
+    "baguette": {
+        "ingredients": {
+            "flour": 400,
+            "water": 280,
+            "yeast": 8,
+            "salt": 6,
+        },
+        "cost": 2.5,
+    }
+}
+
+stock = {
+    "flour": 2000,
+    "water": 1500,
+    "yeast": 50,
+    "salt": 30,
+    "starter": 400,
+}
+
+earnings = 0
+amount_paid = 0
+
+is_on = True
+
+#TODO 1 check_stock(order_ingredients) — checks if the machine has enough of each ingredient for the order. It need to loop through ingredients and compare to stock.
+
+def check_stock(order_ingredients):
+    for ingredient in order_ingredients:
+        if stock[ingredient] < order_ingredients[ingredient]:
+            print(f"You dont have enough {ingredient}")
+            return False
+    return True
+
+#TODO 2 collect_payment() — handles the coin input and returns the total amount inserted.
+
+def collect_payment():
+    quarter = int(input("How much quarters you want to enter?")) * 0.25
+    dime = int(input("How much dimes you want to enter?")) * 0.10
+    nickel = int(input("How much nickels you want to enter?")) * 0.05
+    penny = int(input("How much pennies you want to enter?")) * 0.01
+    amount_paid = quarter + dime + nickel + penny
+    return amount_paid
+
+#TODO 3 handle_payment(amount_paid, bread_cost) — decides if the transaction goes through, gives change if needed, updates earnings. How to update it from inside (GLOBAL? LOCAL?)
+
+def handle_payment(amount_paid, bread_cost):
+    if amount_paid >= bread_cost:
+        global earnings
+        earnings += bread_cost
+        print(f"Payment went through. Your change is {round(amount_paid - bread_cost, 2)}$.")
+        return True
+    else:
+        print("You dont have enough money to pay for the bread")
+        return False
+
+#TODO 4 bake_bread(bread_name, order_ingredients) — deducts ingredients from stock and prints the success message.
+
+def bake_bread(bread_name, order_ingredients):
+    for ingredient in order_ingredients:
+        stock[ingredient] -= order_ingredients[ingredient]
+    print(f"Here is your {bread_name}. Enjoy!")
+
+while is_on:
+    choice = input("What bread would you like: white_loaf / sourdough / baguette ?")
+    if choice == "shutdown":
+        is_on = False
+    elif choice == "status":
+        print(f"{stock['flour']}g")
+        print(f"{stock['water']}ml")
+        print(f"{stock['yeast']}g")
+        print(f"{stock['salt']}g")
+        print(f"{stock['starter']}g")
+        print(f"{earnings}$")
+    elif choice == "white_loaf" or choice == "sourdough" or choice == "baguette":
+        bread = BREAD_MENU[choice]
+        payment = collect_payment()
+        if check_stock(order_ingredients=bread["ingredients"]):
+                if handle_payment(payment, bread["cost"]):
+                    bake_bread(choice, bread["ingredients"])
+
+
